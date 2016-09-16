@@ -3,6 +3,11 @@
 #
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [ -f ~/.bashrc ]; then
+  source ~/.bashrc
+fi
+autoload -U select-word-style
+select-word-style bash
 
 # Source zim
 if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
