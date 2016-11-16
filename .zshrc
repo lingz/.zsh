@@ -1,4 +1,22 @@
+
+
 #
+# User configuration sourced by interactive shells
+#
+
+# Source zim
+if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
+  source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
+fi
+
+#
+# User configuration sourced by interactive shells
+#
+
+# Source zim
+if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
+  source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
+fi
 # User configuration sourced by interactive shells
 #
 
@@ -6,8 +24,12 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
+
+# Correct breaking on alt movement
 autoload -U select-word-style
 select-word-style bash
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
 
 # Source zim
 if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
